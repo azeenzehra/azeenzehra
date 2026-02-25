@@ -1,11 +1,441 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name – Science & Writing</title>
+  <title>Azeen Zehra – Science & Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f5f5fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-soft: #e0ecff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 18px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .hero-left h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    .hero-left p {
+      margin: 4px 0;
+      color: var(--text-muted);
+    }
+    .hero-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: flex-start;
+      font-size: 0.85rem;
+    }
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      white-space: nowrap;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    section {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 16px 18px 18px;
+      border: 1px solid var(--border);
+    }
+    section h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+    .muted { color: var(--text-muted); }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 16px;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .pill {
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #1d4ed8;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .item-list li + li { margin-top: 10px; }
+    .item-title { font-weight: 600; }
+    .item-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .image-card {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 8px;
+      border: 1px dashed var(--border);
+      font-size: 0.8rem;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .cv-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.9rem;
+      border: none;
+    }
+    .button:hover { opacity: 0.93; text-decoration: none; }
+
+    footer {
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .two-col { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>Science journalism and academic portfolio.</p>
+  <div class="page">
+    <!-- TOP PROFILE / NAME / LOCATION -->
+    <header>
+      <div class="hero-left">
+        <h1>Azeen Zehra</h1>
+        <p>Science writer & researcher</p>
+        <p class="hero-meta">
+          Location: Hyderabad, India · Always learning, always explaining.
+        </p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#profile">Profile</a>
+        <a href="#images">Images</a>
+        <a href="#research">Research</a>
+        <a href="#blog">Science blog</a>
+        <a href="#protocols">Protocols</a>
+        <a href="#books">Books</a>
+        <a href="#proud">Things I'm proud of</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ABOUT ME -->
+      <section id="about">
+        <h2>About me</h2>
+        <div class="two-col">
+          <div>
+            <p>
+              I am a scientist who likes to think with experiments and write with clarity.
+              I enjoy taking complicated ideas in biology and turning them into stories
+              that students, researchers and curious readers can actually use.
+            </p>
+            <p>
+              This page collects my work: research, protocols, science writing, books I love,
+              and a few things I am quietly very proud of.
+            </p>
+          </div>
+          <div>
+            <p class="muted"><strong>Current focus areas</strong></p>
+            <div class="pill-list">
+              <span class="pill">Cell & structural biology</span>
+              <span class="pill">Mitochondria & membranes</span>
+              <span class="pill">Science communication</span>
+              <span class="pill">Academic life</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE SECTION -->
+      <section id="profile">
+        <h2>My profile in one glance</h2>
+        <ul class="item-list">
+          <li>
+            <span class="item-title">Name:</span>
+            <span class="item-meta">Azeen Zehra</span>
+          </li>
+          <li>
+            <span class="item-title">Location:</span>
+            <span class="item-meta">Hyderabad, India (open to the world)</span>
+          </li>
+          <li>
+            <span class="item-title">What I do:</span>
+            <span class="item-meta">
+              Research in cell/structural biology, and science writing about how research really happens.
+            </span>
+          </li>
+          <li>
+            <span class="item-title">What I enjoy:</span>
+            <span class="item-meta">
+              Explaining mechanisms, building careful protocols, reading good non‑fiction, and
+              celebrating quiet wins in the lab and in life.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- IMAGES SECTION -->
+      <section id="images">
+        <h2>Images</h2>
+        <p class="muted">
+          You can upload images (figures, microscopy, events) to this repository and show them here.
+          For now, these boxes are placeholders.
+        </p>
+        <div class="image-grid">
+          <div class="image-card">
+            Image 1 – add a figure or photo that represents your research.
+          </div>
+          <div class="image-card">
+            Image 2 – maybe a lab photo, conference, or science‑related picture.
+          </div>
+          <div class="image-card">
+            Image 3 – anything that feels like “you in science”.
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH / WORK -->
+      <section id="research">
+        <h2>Research & projects</h2>
+        <ul class="item-list">
+          <li>
+            <div class="item-title">
+              Current project
+            </div>
+            <div class="item-meta">
+              Short one‑line description of what you are investigating right now – methods, question, why it matters.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              Previous project
+            </div>
+            <div class="item-meta">
+              A few words on your earlier work or dissertation, including the main technique or idea.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SCIENCE BLOG -->
+      <section id="blog">
+        <h2>Science blog</h2>
+        <p class="muted">
+          Short reflections, explainers and notes. Replace these with real posts or links.
+        </p>
+        <ul class="item-list">
+          <li>
+            <div class="item-title">
+              Why good methods sections are acts of kindness
+            </div>
+            <div class="item-meta">
+              A note on writing protocols so that a tired future version of you (or a student)
+              can actually repeat the experiment.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              The joy of understanding one figure deeply
+            </div>
+            <div class="item-meta">
+              Thoughts on slowing down to really read a key figure in a paper, instead of skimming ten papers at once.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- PROTOCOLS -->
+      <section id="protocols">
+        <h2>Protocols & how‑to notes</h2>
+        <p class="muted">
+          A home for your favourite protocols, small tricks, and “do this, not that” notes.
+        </p>
+        <ul class="item-list">
+          <li>
+            <div class="item-title">
+              Example protocol 1
+            </div>
+            <div class="item-meta">
+              One‑line description of the protocol. You can link a PDF or another page:
+              <a href="#">link to protocol</a>.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              Example protocol 2
+            </div>
+            <div class="item-meta">
+              Another protocol or troubleshooting checklist, again with a link if you have one.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- BOOKS -->
+      <section id="books">
+        <h2>Books I’m reading / love</h2>
+        <ul class="item-list">
+          <li>
+            <div class="item-title">
+              Book title 1
+            </div>
+            <div class="item-meta">
+              Author – what you liked about it in one sentence.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              Book title 2
+            </div>
+            <div class="item-meta">
+              Author – how it changed how you think about science, writing, or life.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              Book title 3
+            </div>
+            <div class="item-meta">
+              Author – anything you want to remember from it.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- THINGS I'M PROUD OF -->
+      <section id="proud">
+        <h2>Things I’m proud of</h2>
+        <p class="muted">
+          Big achievements, small personal wins, anything that feels worth keeping.
+        </p>
+        <ul class="item-list">
+          <li>
+            <div class="item-title">
+              Example proud moment 1
+            </div>
+            <div class="item-meta">
+              A short description – maybe finishing a difficult project, learning a hard technique,
+              or helping someone understand a concept.
+            </div>
+          </li>
+          <li>
+            <div class="item-title">
+              Example proud moment 2
+            </div>
+            <div class="item-meta">
+              Another moment, not necessarily “big” on a CV, but important to you.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CV SECTION -->
+      <section id="cv">
+        <h2>CV</h2>
+        <div class="cv-box">
+          <p>
+            Upload a file called <code>cv.pdf</code> to this repository
+            (Code → Add file → Upload files) and this button will download it.
+          </p>
+          <a class="button" href="cv.pdf" target="_blank">Download CV (PDF)</a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <ul class="item-list">
+          <li>
+            <span class="item-title">Email:</span>
+            <span class="item-meta">youremail@example.com</span>
+          </li>
+          <li>
+            <span class="item-title">GitHub:</span>
+            <span class="item-meta">
+              <a href="https://github.com/azeenzehra" target="_blank">github.com/azeenzehra</a>
+            </span>
+          </li>
+          <li>
+            <span class="item-title">Other profiles:</span>
+            <span class="item-meta">
+              Add links to LinkedIn, ORCID, Twitter, or anything else you want people to find.
+            </span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Built with GitHub Pages · Last updated 2026
+    </footer>
+  </div>
 </body>
 </html>
